@@ -56,7 +56,7 @@
                         <h1 style="padding: 30px;">BE01L501-22</h1>
                     </div>
                     <div>
-                        <h1>Générateur du Code-barres</h1>
+                        <h1>Générateur du Code Tracing</h1>
                     </div>
                 </div>
                 

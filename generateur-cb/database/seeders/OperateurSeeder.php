@@ -17,37 +17,37 @@ class OperateurSeeder extends Seeder
     {
         DB::table('operateurs')->insert([
             [
-                'code_operateur' => '01',
+                'code_operateur' => '1',
                 'operateur' => 'Jean Baptiste',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
-                'code_operateur' => '02',
+                'code_operateur' => '2',
                 'operateur' => 'Eric',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
-                'code_operateur' => '03',
-                'operateur' => 'Hay',
+                'code_operateur' => '3',
+                'operateur' => 'Hayk',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
-                'code_operateur' => '04',
+                'code_operateur' => '4',
                 'operateur' => 'Mohamed Ba',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
-                'code_fournisseur' => '05',
+                'code_fournisseur' => '5',
                 'fournisseur' => 'Modibo Togo',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
-                'code_fournisseur' => '06',
+                'code_fournisseur' => '6',
                 'fournisseur' => 'Papa Célestin',
                 'created_at' => now(),
                 'updated_at' => now()

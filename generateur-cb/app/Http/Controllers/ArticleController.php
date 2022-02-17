@@ -11,7 +11,7 @@ class ArticleController extends Controller
 
         $articles = Article::all();  //dd($articles);
 
-        return view('welcome', compact('articles'));
+        return view('affichage.articles', compact('articles'));
 
     }
 }

@@ -1,12 +1,14 @@
+@extends('welcome')
+
 @section('articles')
-    @csrf
-    
-    <form action="" method="get">
+    <form action="#" method="post">
+        @csrf
+        @method('POST')
         <select name="" id="">
-            <option value="">Choississez l'article</option>
+            <option value="">Sélectionner l'article</option>
             @foreach ($articles as $article)           
                 <option value="{{ $article->code_article }}">
-                    <li>{{ $article->code_article }} {{ $article->article }}</li>
+                    {{ $article->code_article }} {{ $article->article }}
                 </option>            
             @endforeach
         </select>

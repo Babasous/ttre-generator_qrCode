@@ -11,7 +11,7 @@ class FournisseurController extends Controller
 
         $fournisseurs = Fournisseur::all(); //dd($fournisseurs);
 
-        return view('welcome', compact('fournisseurs'));
+        return view('affichage.fournisseurs', compact('fournisseurs'));
 
     }
 }

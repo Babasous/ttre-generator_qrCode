@@ -11,7 +11,7 @@ class OperateurController extends Controller
 
         $operateurs = Operateur::all();  //dd($operateurs);
 
-        return view('welcome', compact('operateurs'));
+        return view('affichage.operateurs', compact('operateurs'));
 
     }
 }

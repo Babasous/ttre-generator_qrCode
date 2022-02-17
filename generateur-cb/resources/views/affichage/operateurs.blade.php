@@ -1,12 +1,14 @@
+@extends('welcome')
+
 @section('operateurs')
-     @csrf
-    
-    <form action="" method="get">
+    <form action="#" method="post">
+        @csrf
+        @method('POST')
         <select name="" id="">
-            <option value="">Choississez l'opérateur</option>
+            <option value="">Sélectionner l'opérateur</option>
             @foreach ($operateurs as $operateur)           
                 <option value="{{ $operateur->code_operateur}}">
-                    <li>{{ $operateur->code_operateur }} {{ $operateur->operateur }}</li>
+                    {{ $operateur->code_operateur }} {{ $operateur->operateur }}
                 </option>            
             @endforeach
         </select>

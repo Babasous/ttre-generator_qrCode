@@ -21,7 +21,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* Route::get('/articles', [ArticleController::class, 'show']);
-Route::get('/fournisseurs', [FournisseurController::class, 'show']);
-Route::get('/operateurs', [OperateurController::class, 'show']);
-Route::get('/pays', [PaysController::class, 'show']); */
+
+Route::get('/', [ArticleController::class, 'show'])->name('articles');
+Route::get('/', [FournisseurController::class, 'show'])->name('fournisseurs');
+Route::get('/', [OperateurController::class, 'show'])->name('operateurs');
+Route::get('/', [PaysController::class, 'show'])->name('pays');

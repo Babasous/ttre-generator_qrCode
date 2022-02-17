@@ -11,7 +11,7 @@ class PaysController extends Controller
 
         $pays = Pays::all(); //dd($pays);
 
-        return view('welcome', compact('pays'));
+        return view('affichage.pays', compact('pays'));
 
     }
 }

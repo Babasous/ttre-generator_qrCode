@@ -118,8 +118,9 @@
                             </div> --}}
                         </div>
                     </div>
-                    <button id="etiquette" type="submit" style="margin-left: 70px; margin-top: 20px; width: 250px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Générer l'étiquette</button>
-                    <button id="borderau" type="submit" style="margin-left: 110px; margin-top: 20px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Générer bordereau d'enlevement</button>
+                    <button id="etiquette" type="submit" style="margin-left: 270px; margin-top: 20px; width: 250px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Générer l'étiquette</button>
+                    {{-- <button type="submit" style="margin-left: 110px; margin-top: 20px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Générer bordereau d'enlevement</button> --}}
+                    <a href="{{ route('bordereau.bordereau') }}" id="borderau" style="color:#1E9C07; font-size: 30px; margin-left: 150px;"><b>Vers la création du bordereau</b></a>
                 </div>
                   
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">                    
@@ -129,43 +130,4 @@
                 </div>
             </div>
         </div> 
-        
-
-        <script>
-            let cpt = 0
-            let code_tracking = '';
-            const toDay = new Date();
-
-            etiquette.onclick = function(){
-                if(!(frmEtiquette.pays.value === '') && !(frmEtiquette.fournisseurs.value === '') && !(frmEtiquette.articles.value === '') && !(frmEtiquette.operateurs.value === '')){
-                    code.innerHTML = (frmEtiquette.pays.value).toUpperCase();
-                    code.innerHTML += frmEtiquette.fournisseurs.value;
-                    code.innerHTML += frmEtiquette.articles.value;
-                    code.innerHTML += frmEtiquette.operateurs.value;
-                    cpt++;
-                    code.innerHTML += cpt;
-                    code.innerHTML += '-';
-                    code.innerHTML += toDay.getFullYear() - 2000;
-                    code_tracking = code.innerHTML;
-                    code.style.color = '#1E9C07';
-                }else{
-                    code.innerHTML = 'Erreurs !!!'
-                    code.style.color = 'red';
-                }                                
-            }   
-
-            borderau.onclick = function(){
-                if((code_tracking).length < 10){
-                    code.innerHTML = "Etiquette !!!";
-                    code.style.color = 'red';
-
-                    
-
-                }else{
-                    code.innerHTML = "OK BE";
-                    code.style.color = '#1E9C07';
-                }
-            }
-                     
-        </script>
 @endsection

@@ -22,6 +22,7 @@
                 display: flex;
                 justify-content: space-evenly;
             }
+           
         </style>
     </head>
     <body class="antialiased">
@@ -30,6 +31,32 @@
 
         @yield('bordereau')
 
-        
+        <script>
+            let cpt = 0
+            let code_tracking = '';
+            const toDay = new Date();
+            borderau.style.display = 'none';
+
+            etiquette.onclick = function(){
+                if(!(frmEtiquette.pays.value === '') && !(frmEtiquette.fournisseurs.value === '') && !(frmEtiquette.articles.value === '') && !(frmEtiquette.operateurs.value === '')){
+                    code.innerHTML = (frmEtiquette.pays.value).toUpperCase();
+                    code.innerHTML += frmEtiquette.fournisseurs.value;
+                    code.innerHTML += frmEtiquette.articles.value;
+                    code.innerHTML += frmEtiquette.operateurs.value;
+                    cpt++;
+                    code.innerHTML += cpt;
+                    code.innerHTML += '-';
+                    code.innerHTML += toDay.getFullYear() - 2000;
+                    code_tracking = code.innerHTML;
+                    code.style.color = '#1E9C07';
+                    borderau.style.display = 'block';
+                    etiquette.style.display = 'none';
+                }else{
+                    code.innerHTML = 'Erreurs !!!'
+                    code.style.color = 'red';
+                }                                
+            } 
+
+        </script>
     </body>
 </html>

@@ -13,7 +13,7 @@
                 <b><h1 id="code" style="padding: 30px; font-size: 30px">BE01L501-22</h1></b>
             </div>
             <div>
-                <h1>Création du bordereau d'enlevement</h1>
+                <h1>Création du bordereau d'enlèvement</h1>
             </div>
         </div>               
        
@@ -46,8 +46,8 @@
                                 <option value="">Sélectionner un article</option>
                                 <option value="L">Laptop</option>
                                 <option value="C">Câbles</option>
-                                <option value="O">Ordinateurs</option>
-                                <option value="Pc">Pc</option>
+                                <option value="D">Desktop</option>
+                                <option value="R">Projecteurs</option>
                                  <option value="I">Imprimantes</option>
                                 <option value="V">Variés</option>
                             </select>
@@ -65,40 +65,38 @@
                 <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                     <div class="flex items-center">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                        <div class="ml-4 text-lg leading-7 font-semibold">Nombre Article:</div>
+                        <div class="ml-4 text-lg leading-7 font-semibold">Description:</div>
                         {{-- <form id="frmFournisseurs" action="#"> --}}
-                            <input type="number" name="article" id="article">
+                            {{-- <textarea name="description" id="" cols="30" rows="10"></textarea> --}}
                         {{-- </form> --}}
                         {{-- @yield('fournisseurs') --}}
                     </div>
 
-                    {{-- <div class="ml-12">
+                    <div class="ml-12">
                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                             @yield('fournisseurs')
+                            <textarea name="description" id="description" cols="30" rows="5" placeholder="Description du produit..."></textarea>
                         </div>
-                    </div> --}}
+                    </div>
                 </div>
 
                 <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                     <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Description:</div>
-                        {{-- <form id="frmOperateurs" action="#"> --}}
-                            {{-- <textarea name="description" id="" cols="30" rows="10"></textarea> --}}
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
+                        <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Nombre Article:</div>
+                                                    
                         </form>
-                        {{-- @yield('operateurs') --}}
                     </div>
 
-                   <div class="ml-12">
+                  <div class="ml-12">
                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                            {{--  @yield('operateurs') --}}
-                            <textarea name="description" id="description" cols="30" rows="5"></textarea>
+                           <input type="number" name="article" id="article" placeholder="Combien d'articles ?">                            
                         </div>
                     </div>
                 </div>
             </div>
             <button id="prtEtiquette" type="submit" style="margin-left: 70px; margin-top: 20px; width: 250px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer l'étiquette</button>
-            <button id="prtBorderau" type="submit" style="margin-left: 110px; margin-top: 20px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer le bordereau d'enlevement</button>
+            <button id="prtBorderau" type="submit" style="margin-left: 110px; margin-top: 20px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer le bordereau d'enlèvement</button>
         </div>
           
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">                    
@@ -108,11 +106,4 @@
         </div>
     </div>
 </div> 
-
-
-<script>
-    codeTracking.innerHTML = code_tracking;
-             
-</script>
-    
 @endsection

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaysController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\SolutionController;
 use App\Http\Controllers\BordereauController;
 use App\Http\Controllers\EtiquetteController;
 use App\Http\Controllers\OperateurController;
@@ -30,3 +31,5 @@ Route::get('/', [PaysController::class, 'show'])->name('pays'); */
 
 Route::get('/', [EtiquetteController::class, 'etiquette'])->name('etiquette');
 Route::get('/bordereau', [BordereauController::class, 'bordereau'])->name('bordereau.bordereau');
+
+Route::get('/', [SolutionController::class, 'solution'])->name('solution');

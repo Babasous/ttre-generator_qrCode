@@ -11,6 +11,6 @@ class EtiquetteController extends Controller
 
         $etiquette = new Etiquette();
 
-        return view('affichage.etiquette',[EtiquetteController::class, compact('etiquette')]);
+        return view('affichage.etiquette',[compact('etiquette')]);
     }
 }

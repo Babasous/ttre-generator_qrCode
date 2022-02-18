@@ -27,9 +27,11 @@
     </head>
     <body class="antialiased">
 
-        @yield('etiquette')
+        {{-- @yield('etiquette') --}}
 
         @yield('bordereau')
+
+        @yield('solution')
 
         <script>
             let cpt = 0
@@ -38,7 +40,7 @@
             borderau.style.display = 'none';
 
             etiquette.onclick = function(){
-                if(!(frmEtiquette.pays.value === '') && !(frmEtiquette.fournisseurs.value === '') && !(frmEtiquette.articles.value === '') && !(frmEtiquette.operateurs.value === '')){
+                if(!(frmEtiquette.pays.value === '')){
                     code.innerHTML = (frmEtiquette.pays.value).toUpperCase();
                     code.innerHTML += frmEtiquette.fournisseurs.value;
                     code.innerHTML += frmEtiquette.articles.value;

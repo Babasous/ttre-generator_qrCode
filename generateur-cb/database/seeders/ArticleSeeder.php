@@ -35,8 +35,8 @@ class ArticleSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'code_article' => 'Pc',
-                'article' => 'Pc',
+                'code_article' => 'Pr',
+                'article' => 'Projecteurs',
                 'created_at' => now(),
                 'updated_at' => now()
             ],

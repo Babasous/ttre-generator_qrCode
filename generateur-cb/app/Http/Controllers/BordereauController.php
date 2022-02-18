@@ -11,7 +11,7 @@ class BordereauController extends Controller
 
         $bordereau = new Bordereau();
 
-        return view('affichage2.bordereau',[BordereauController::class, compact('bordereau')]);
+        return view('affichage2.bordereau',[compact('bordereau')]);
     }
 
     public function store(Request $request){

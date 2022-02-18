@@ -95,8 +95,9 @@
                     </div>
                 </div>
             </div>
-            <button id="prtEtiquette" type="submit" style="margin-left: 70px; margin-top: 20px; width: 250px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer l'étiquette</button>
-            <button id="prtBorderau" type="submit" style="margin-left: 110px; margin-top: 20px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer le bordereau d'enlèvement</button>
+            <button id="prtEtiquette" type="submit" style="margin-left: 0px; margin-top: 20px; width: 200px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer l'étiquette</button>
+            <button id="enregistrer" type="submit" style="margin-left: 20px; margin-top: 20px; width: 200px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Enrégistrer</button>
+            <button id="prtBorderau" type="submit" style="margin-left: 20px; margin-top: 20px; color: white; background-color: #1E9C07" class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">Imprimer le bordereau d'enlèvement</button>
         </div>
           
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">                    

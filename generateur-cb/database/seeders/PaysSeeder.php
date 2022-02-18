@@ -34,6 +34,48 @@ class PaysSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ],
+            [
+                'code_pays' => 'DE',
+                'pays' => 'Allemagne',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'code_pays' => 'DK',
+                'pays' => 'Danemark',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'code_pays' => 'BG',
+                'pays' => 'Bulgarie',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'code_pays' => 'IE',
+                'pays' => 'Irlande',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'code_pays' => 'EE',
+                'pays' => 'Estonie',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'code_pays' => 'CH',
+                'pays' => 'Suisse',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'code_pays' => 'UK',
+                'pays' => 'Royaume Uni',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
         ]);
     }
 }
